@@ -16,12 +16,7 @@
     <link rel="stylesheet" href="./css/style.css" />
   </head>
   <body>
-    <!--<div id="mainContainer" class="main-container">
-      <button id="btnSignUp" class="btn" >Sign up</button> &nbsp; &nbsp;
-      <button  class="btn" >sign in</button>
-
-    </div>-->
-
+    
     <section id="signUpForm" class="vh-100">
       <div class="mask d-flex align-items-center h-100 gradient-custom-3">
         <div class="container h-100">
@@ -36,10 +31,8 @@
                     <div class="form-outline mb-4">
                       <div class="d-flex flex-row">
                         <input autocomplete="off" type="text" id="firstName" class="form-control form-control-lg" > </input>
-                        <div class="d-flex justify-content-center align-items-center p-1">
                           <i class="far fa-check-circle" id="firstNameStatusOk" style="display: none;"></i>
                           <i class="far fa-times-circle" id="firstNameStatusWorng" style="display: none;"></i>
-                        </div>
                       </div>
                       <label class="form-label" for="firstName">First Name</label>
                     </div>
@@ -47,10 +40,8 @@
                     <div class="form-outline mb-4">
                       <div class="d-flex flex-row">
                         <input autocomplete="none" type="text" id="lastName" class="form-control form-control-lg" > </input>
-                        <div class="d-flex justify-content-center align-items-center p-1">
                           <i class="far fa-check-circle" id="lastNameStatusOk" style="display: none;"></i>
                           <i class="far fa-times-circle" id="lastNameStatusWorng" style="display: none;"></i>
-                        </div>
                       </div>
                       <label class="form-label" for="form3Example1cg">Last Name</label>
                     </div>
@@ -58,18 +49,16 @@
                     <div class="form-outline mb-4">
                       <div class="d-flex flex-row">
                         <input autocomplete="none" type="email" id="userEmail" class="form-control form-control-lg" />
-                        <div class="d-flex justify-content-center align-items-center p-1">
                           <i class="far fa-check-circle" id="emailStatusOk" style="display: none;"></i>
                           <i class="far fa-times-circle" id="emailStatusWorng" style="display: none;"></i>
-                        </div>
                       </div>
                       <label class="form-label" for="userEmail">Your Email</label>
                     </div>
     
                     <div class="form-outline mb-4">
                       <div class="d-flex flex-row">
-                        <input value="152555" type="password" id="form3Example4cg" class="form-control form-control-lg" />
-                        <i id="toggle-password1" class="fas fa-eye eye"></i>
+                        <input type="password" id="pass" class="form-control form-control-lg" />
+                        <i id="toggle-password1" class="fas fa-eye eye" toggle="#pass"></i>
                         <div class="d-flex justify-content-center align-items-center p-1">
                           <i class="far fa-check-circle" style="display: none;"></i>
                         </div>
@@ -77,16 +66,24 @@
                       
                       <label class="form-label" for="form3Example4cg">Password</label>
                     </div>
+
+                    <div id="message" style="display: none;">
+                      <h6>Password must contain the following:</h6>
+                      <p id="letter" class="invalid">A <b>lowercase</b> letter</p>
+                      <p id="capital" class="invalid">A <b>capital (uppercase)</b> letter</p>
+                      <p id="number" class="invalid">A <b>number</b></p>
+                      <p id="special" class="invalid">A <b>special character</b> (! @ # $ % ^ & *)</p>
+                      <p id="length" class="invalid">Minimum <b>8 characters</b></p>
+                    </div>
     
                     <div class="form-outline mb-4">
                       <div class="d-flex flex-row">
-                        <input value="12547" type="password" id="form3Example4cdg" class="form-control form-control-lg" />
-                        <i id="toggle-password" class="fas fa-eye eye"></i>
+                        <input type="password" id="passConfirm" class="form-control form-control-lg" />
+                        <i toggle="#passConfirm" id="toggle-password" class="fas fa-eye eye"></i>
                         <div class="d-flex justify-content-center align-items-center p-1">
-                          <i class="far fa-check-circle" style="display: none;"></i>
                         </div>
                       </div>
-                      <label class="form-label" for="form3Example4cdg">Repeat your password</label>
+                      <label class="form-label" for="form3Example4cdg">Repeat your password</label> &nbsp; <i style="display: none;" id="passNotMatchStatus" class="fas fa-info-circle"> doesn't match password,Try again</i>
                     </div>
     
                     <div class="form-check d-flex justify-content-center mb-5">

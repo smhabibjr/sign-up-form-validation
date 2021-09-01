@@ -22,6 +22,30 @@
   margin-left: -25px;
   cursor: pointer;
 }
+.far{
+  position: relative;
+  float: right;
+  margin-top: 15px;
+  margin-left: -20px;
+}
+
+.valid{
+  color: green;
+  font-size: 12px;
+}
+.valid::before{
+  content: "✔ ";
+}
+
+.invalid{
+  font-size: 12px;
+  color: red;
+}
+.invalid::before{
+  content: "X ";
+}
+
+
 
 /*----------------------sign up form ---------------------*/
 .gradient-custom-3 {
