@@ -51,11 +51,11 @@ $("#toggle-password1").click(function(){
 });
 // When the user clicks on the password field, show the message box
 $("#pass").focus(function(){
-  $("#message").show();
+  $("#message").slideToggle("slow");
 });
 // When the user clicks outside of the password field, hide the message box
 $("#pass").blur(function(){
-  $("#message").hide();
+  $("#message").slideToggle("slow");
 });
 
 // When the user starts to type something inside the password field
